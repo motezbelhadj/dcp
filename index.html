@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réviser Toi - Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <h2>Réviser Toi</h2>
+      <nav>
+        <ul>
+          <li><a href="#" class="active" onclick="showHome()">Home</a></li>
+          <li><a href="#" onclick="startQuiz('programming')">Programming</a></li>
+          <li><a href="#" onclick="startQuiz('frontend')">Frontend</a></li>
+          <li><a href="#" onclick="startQuiz('backend')">Backend</a></li>
+          <li><a href="#" onclick="startQuiz('database')">Database</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Quiz Content -->
+<main class="quiz-container" id="quiz-container">
+  <div id="home">
+    <h1>Welcome to Réviser Toi</h1>
+    <p>Choose a topic from the sidebar to start your quiz!</p>
+  </div>
+
+  <div id="quiz" class="hidden">
+    <h1 id="question-title"></h1>
+    <p id="question-text"></p>
+    <div id="options" class="options"></div>
+    <button id="next-btn" class="hidden" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div id="result" class="hidden">
+    <h1>Quiz Completed!</h1>
+    <p>Your Score: <span id="score"></span></p>
+    <button onclick="showHome()">Go to Home</button>
+  </div>
+</main>
+
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
